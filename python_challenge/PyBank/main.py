@@ -5,7 +5,7 @@ import os
 import csv
 #csvpath = os.path.join('..','uci-irv-data-pt-08-2020-u-c','02-Homework','03-Python','Instructions','PyBank','Resources','budget_data.csv')
 #	use next and csv reader		
-csvpath=os.path.join('..','..','..','uci-irv-data-pt-08-2020-u-c','02-Homework','03-Python','Instructions','PyBank','Resources','budget_data.csv')
+csvpath=os.path.join('Resources','budget_data.csv')
 with open(csvpath) as csvfile:
 	csvreader=csv.reader(csvfile,delimiter=",")
 	print(csvreader)
@@ -50,10 +50,10 @@ print(f'Average profit/Loss {average} ')
 avgp=["Average profit change",average]
 
 #prnit results in txt file
-output_file= os.path.join("..", "analysis", "bankpy.csv")
+output_file= os.path.join("..", "analysis", "bank_py.csv")
 with open(output_file, "w") as datafile:
 	writer = csv.writer(datafile)	
-	title="Financial Analysis"
+	title=["Financial Analysis"]
 	writer.writerow(title)
 	writer.writerow(totalm)
 	writer.writerow(totalp)

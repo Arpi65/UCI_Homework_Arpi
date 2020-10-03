@@ -2,9 +2,7 @@
 import os
 import csv
 # filepath
-csvpath = os.path.join('..', '..', '..', 'uci-irv-data-pt-08-2020-u-c',
-'02-Homework', '03-Python', 'Instructions',
-'PyPoll', 'Resources', 'election_data.csv')
+csvpath = os.path.join('Resources', 'election_data.csv')
 candidate = []
 with open(csvpath) as csvpoll:
     pollreader = csv.reader(csvpoll, delimiter=",")
